@@ -4,14 +4,54 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}
+        <!-- CSS Flickity -->
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Compiled and minified CSS MATERIALIZE -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         {% endblock %}
     </head>
     <body>
+         <!-- NAVBAR FIXE Materialize-->
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="#!" class="brand-logo">E-Kooks</a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a> <!-- apparait en mode mobile device -->   
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="{{ path('accueil_index') }}">Accueil</a></li>
+                        <li><a href="{{ path('frigo_index')}}">Frigo</a></li>
+                        <li><a href="{{ path('user_index') }}">Mon compte</a></li>
+                        <li><a href="{{ path('contact_index') }}">Contact</a></li>
+                    </ul>
+                </div>   
+            </nav>
+        </div>
+        <!-- NAVBAR MOBILE (apparait sur les petits device) -->
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="{{ path('accueil_index') }}">Accueil</a></li>
+            <li><a href="{{ path('frigo_index')}}">Frigo</a></li>
+            <li><a href="{{ path('user_index') }}">Mon compte</a></li>
+            <li><a href="{{ path('contact_index') }}">Contact</a></li>
+        </ul>
         {% block body %}{% endblock %}
         {% block javascripts %}
-        <!-- Compiled and minified JavaScript -->
+        <!-- Compiled and minified JavaScript MATERIALIZE -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!-- JavaScript Flickity -->
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+        <script>
+        /**
+        * NAVBAR MOBILE Materialize
+        */
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems, {
+                //options
+                contain: true
+            });
+        });
+        </script>
         {% endblock %}
     </body>
 </html>
