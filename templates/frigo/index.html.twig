@@ -1,0 +1,95 @@
+{% block title %}Hello AccueilController!{% endblock %}
+
+{% block body %}
+    <main class="container">
+        {# section Plat #}
+        <section class="selectionplat">
+            <h3>Vous êtes plus:</h3>
+            <div class="bouttonselectionplat">
+                <button class="waves-effect waves-light btn-small" type="submit"><i class="fas fa-cheese"></i> Entrée</button>
+                <button class="waves-effect waves-light btn-small" type="submit"><i class="fas fa-pizza-slice"></i> Plat</button>
+                <button class="waves-effect waves-light btn-small" type="submit"><i class="fas fa-ice-cream"></i> Déssert</button>
+                <div>
+        </section>
+
+        <section class="sectionvegetarien">
+            <h3>Végetarien?</h3>
+            <div class="bouttonvegetarien">
+                <button class="waves-effect waves-light btn-small">Oui</button>
+                <button class="waves-effect waves-light btn-small">Non</button>
+            </div>
+        </section>
+
+        <section class="section_choix_ingrediants">
+            <h3>Il reste quoi dans le frigo ?</h3>
+            <!-- Customizable input  -->
+            <div class="chip chips-initials">
+                <div class="chip">
+                    Tag
+                    <i class="close material-icons">close</i>
+                </div>
+            </div>
+        </section>
+
+
+        <h3>Ce que l'on vous propose:</h3>
+        <!-- SECTION CARDS-->
+
+        <section class="row">
+
+            <div class="main-carousel" data-flickity='{ "groupCells": 3 }'>
+
+                <div class="col s4">
+                    <div class="card hoverable">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator responsive-img" src="images/plat2.jpg">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4"><img class="circle" height="25px" width="25px" src="images/drapeau_france.jpg"> Plat 01<i class="material-icons right">expand_less</i></span>
+                            <p><a href="#">Recette complète</a><span class="material-icons right">favorite_border</span></p>
+                        </div>
+                        <!-- Ce qui apparait au click de l'icone expand_less -->
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4"><img class="circle" height="25px" width="25px" src="images/drapeau_france.jpg"> Plat 01 <i class="material-icons right">close</i></span>
+                            <p>Un bon repas du pays de la France Miammiam!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s4">
+                    <div class="card hoverable">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator responsive-img" src="images/plat2.jpg">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4"><img class="circle" height="25px" width="25px" src="images/drapeau_france.jpg"> Plat 02<i class="material-icons right">expand_less</i></span>
+                            <p><a href="#">Recette complète</a><span class="material-icons right">favorite_border</span></p>
+                        </div>
+                        <!-- Ce qui apparait au click de l'icone expand_less -->
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4"><img class="circle" height="25px" width="25px" src="images/drapeau_france.jpg"> Plat 02 <i class="material-icons right">close</i></span>
+                            <p>Un bon repas du pays de la France Miammiam!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s4">
+                    <div class="card hoverable">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator responsive-img" src="images/plat2.jpg">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4"><img class="circle" height="25px" width="25px" src="images/drapeau_france.jpg"> Plat 03<i class="material-icons right">expand_less</i></span>
+                            <p><a href="#">Recette complète</a><span class="material-icons right">favorite_border</span></p>
+                        </div>
+                        <!-- Ce qui apparait au click de l'icone expand_less -->
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4"><img class="circle" height="25px" width="25px" src="images/drapeau_france.jpg"> Plat 03 <i class="material-icons right">close</i></span>
+                            <p>Un bon repas du pays de la France Miammiam!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

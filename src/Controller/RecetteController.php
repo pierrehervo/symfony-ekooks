@@ -1,4 +1,3 @@
-
 <?php
 
 namespace App\Controller;
@@ -7,16 +6,15 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class FrigoController extends AbstractController
+class RecetteController extends AbstractController
 {
     /**
-     * @Route("/frigo", name="frigo_index")
+     * @Route("/", name="recette_index")
      */
     public function index(): Response
     {
-        return $this->render('frigo/index.html.twig', [
+        return $this->render('recette/index.html.twig', [
 
         ]);
     }
-
 }

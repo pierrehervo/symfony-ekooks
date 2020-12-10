@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello RecetteController!{% endblock %}
+
+{% block body %}
+    <!-- DEBUT DE LA PAGE RECETTE -->
+    <section class="recette">
+        <img src="./images/plat2.jpg" alt="">
+        <i id="iconecoeur_recette" class="fas fa-heart float-right"></i>
+
+        <div class="iconesnoteetoiles">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+        </div>
+
+        <!--CHEF DE LA RECETTE-->
+        <div class="divchefetoile">
+            <img id="imagechef" src="./images/chefthierrymarx.jpg" alt="">
+            <div>
+                <h4>Thierry Marx <img id="france3" src="./images/drapeau_france.jpg" alt="">  </h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Eveniet placeat impedit quaerat minima odit quos necessitatibus accusantium praesentium ut,
+                    fugiat saepe quis at corrupti ipsam voluptate hic voluptatibus error velit?</p>
+            </div>
+        </div>
+        <!-- FIN CHEF DE LA RECETTE-->
+        <div class="section_ingredients_preparation">
+            <!--INGREDIENTS-->
+            <div class="ingredients">
+                <h4>Ingrédients</h4>
+                <h6>Nombre de personnes</h6>
+                <!--BOUTTON NOMBRE DE PERSONNES POUR UNE RECETTE-->
+
+                <div class="bouttoningredients">
+                    <button><i class="fas fa-plus"></i></button>
+                    <input id="inputnumber" type="text">
+                    <button><i class="fas fa-minus"></i></button>
+                </div>
+
+                <!-- LISTE INGREDIANTS RECETTE AVEC IMAGE-->
+                <div class="listeingrediants">
+                    <ul>
+                        <li><img src="./images/oeufs.jpg" alt="oeuf">1 oeuf</li>
+                        <br>
+                        <li><img src="./images/avocat.jpg" alt="avocat">1 avocat</li>
+                        <br>
+                        <li><img src="./images/salade.jpg" alt="salade">1 salade</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- FIN INGREDIENTS -->
+            <div id="border"></div>
+            <!--DEBUT PREPARATION RECETTE-->
+            <div class="preparationrecette col-lg-6 text-justify">
+                <h4>Préparation</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Cum maxime modi laudantium debitis. Atque odio iusto ratione,
+                    harum dolorem sint assumenda voluptas nisi molestias eum iure aliquid neque! Perspiciatis, voluptatum!
+                    <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Doloremque nam suscipit soluta iure velit pariatur architecto,
+                    ipsa modi, nobis aliquid eligendi totam ex tempore est molestiae nihil dolorem dolores dignissimos?
+                </p>
+            </div>
+
+        </div>
+        <!--FIN PREPARATION RECETTE-->
+        <!--VIDEO-->
+        <iframe width="315" height="315" src="https://www.youtube.com/embed/HxSlPT200iQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <i id="arrowup" class="fas fa-arrow-up"></i>
+
+    </section>
+    <!--FIN DE LA PAGE RECETTE-->
+{% endblock %}
