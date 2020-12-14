@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+{% block title %}recettes{% endblock %}
+
+{% block body %}
+<h1>Liste des recettes</h1>
+<p><a href="{{ path('recette_add') }}">Ajouter une recette</a></p>
+{% for recette in recettes %}
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>Titre</th>
+            <th>Pays</th>
+            <th>Preparation</th>
+            <th>Ingredients</th>
+            <th>Modifier</th>
+            <th>Supprimer</th>
+        </thead>
+        <tbody>
+            <td>{{ recette.id }}</td>
+            <td>{{ recette.titre }}</td>
+            <td>{{ recette.pays }}</td>
+            <td>{{ recette.preparation }}</td>
+            <td>{{ recette.ingredients }}</td>
+            <td><a href="{{ path('recette_modify',{'id': recette.id}) }}">Modifier</a></td>
+            <td><a href="{{ path('recette_delete',{'id': recette.id}) }}">supprimer</a></td>
+        </tbody>
+    </table>
+{% endfor %}
+{% endblock %}
