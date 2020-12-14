@@ -260,4 +260,9 @@ class Recettes
 
         return $this;
     }
+
+    public function __toString()
+    {
+        return $this->recette_titre;
+    }
 }
