@@ -4,7 +4,6 @@
 
 {% block body %}
     <main class="container">
-
         <section class="profil">
             
             <h5>PHOTO DE PROFIL</h5>
@@ -21,33 +20,31 @@
 
             <h5>IDENTIFIANT</h5>
        
+           
+       
             <form class="col s12">
                 <div class="row collapse-body">
                     <div class="input-field col s6">
                         <input id="first_name" type="text" class="validate">
-                        <label for="first_name">Nom</label>
+                        <label for="nom">{{user.nom}}</label>
                     </div>
                     <div class="input-field col s6">
                         <input id="last_name" type="text" class="validate">
-                        <label for="last_name">Prénom</label>
+                        <label for="prenom">{{user.prenom}}</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
                         <input id="adress" type="text" class="validate">
-                        <label for="adress">Adresse</label>
+                        <label for="adresse">{{user.adresse}}</label>
                         <button class="btn waves-effect waves-light" type="submit" name="action">Changer l'adresse</button>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
                         <input id="email" type="email" class="validate">
-                        <label for="email">Email</label>
+                        <label for="email">{{user.email}}</label>
                     </div>
-                </div>
-                <div class="input-field col s6">
-                    <input id="telephone" type="tel" class="validate" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}">
-                    <label for="telephone">Téléphone</label>
                 </div>
             </div>
 
