@@ -15,13 +15,13 @@
                             <img class="activator responsive-img" src="images/plat2.jpg">
                         </div>
                         <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4"><img class="circle" height="25px" width="25px" src="images/drapeau_france.jpg"> {{path('recette.titre')}}<i class="material-icons right">expand_less</i></span>
+                            <span class="card-title activator grey-text text-darken-4"><img class="circle" height="25px" width="25px" src="images/drapeau_france.jpg"> {{recette.titre}}<i class="material-icons right">expand_less</i></span>
                             <p><a href="#">Recette complète</a><span class="material-icons right">favorite_border</span></p>
                         </div>
                         <!-- Ce qui apparait au click de l'icone expand_less -->
                         <div class="card-reveal">
-                            {# <span class="card-title grey-text text-darken-4"><img class="circle" height="25px" width="25px" src="images/drapeau_france.jpg"> {{path ('recette.titre')}} <i class="material-icons right">close</i></span> 
-                            <p>{{path ('recette.preparation')}}</p> #}
+                            <span class="card-title grey-text text-darken-4"><img class="circle" height="25px" width="25px" src="images/drapeau_france.jpg"> {{recette.titre}} <i class="material-icons right">close</i></span> 
+                            <p>{{recette.preparation}}</p>
                         </div>
                     </div>
                 {% endfor %}

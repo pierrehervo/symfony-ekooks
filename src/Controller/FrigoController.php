@@ -1,4 +1,3 @@
-
 <?php
 
 namespace App\Controller;
@@ -18,5 +17,4 @@ class FrigoController extends AbstractController
 
         ]);
     }
-
 }
