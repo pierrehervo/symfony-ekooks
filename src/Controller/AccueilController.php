@@ -18,9 +18,11 @@ class AccueilController extends AbstractController
         $repository = $this->getDoctrine()->getRepository(Recettes::class);
 
         $recettes = $repository->findAll();
+        $path = null;
         
         return $this->render('accueil/index.html.twig', [
-            'recettes'=> $recettes
+            'recettes' => $recettes,
+            'path' => $path
         ]);
     }
 }
